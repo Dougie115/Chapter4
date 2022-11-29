@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    //Variable declaration
+    int num1,num2,num3;
+
+    //Terminal Output
+    cout << "\nThis program will output 3 inputs in ascending order."<<endl;
+    cout<< "Please enter numbers followed by a space:"<<endl;
+
+    //User Input
+    cin >> num1 >> num2 >> num3;
+    cout << "\nThe numbers entered are: " << num1 << ", " << num2 << ", and " << num3 <<endl;
+
+    /*
+    Using if statements and the && we will determine which number is the greatest. After determing which one is
+    the bigger one we will compare with the two other inputs and display them in ascending order. We are using
+    methods up until chapter 4. 
+    */
+    if (num1 > num2 && num1 > num3 )
+    {
+        if(num2 > num3){
+            cout << "In ascending order: " << num3 <<", " <<num2 << ", and " <<num1 <<endl;
+        }
+         else{
+            cout << "In ascending order: " << num2 <<", " <<num3 << ", and " <<num1 <<endl;
+        }
+
+    }
+
+    if (num2 > num1 && num2 > num3 )
+    {
+        if(num1 > num3){
+            cout << "In ascending order: " << num3 <<", " <<num1 << ", and " <<num2 <<endl;
+        }
+        else{
+            cout << "In ascending order: " << num1 <<", " <<num3 << ", and " <<num2 <<endl;
+        }
+    }
+
+    if (num3 > num2 && num3 > num1 )
+    {
+        if(num2 > num1){
+            cout << "In ascending order: " << num1<<", " <<num2 << ", and " <<num3 <<endl;
+        }
+         else{
+            cout << "In ascending order: " << num2 <<", " <<num1 << ", and " <<num3 <<endl;
+        }
+    }
+
+    cout << "\nGoodbye..." <<endl;
+
+    return 0;
+}

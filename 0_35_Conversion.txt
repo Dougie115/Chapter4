@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main()
+{
+    int num; 
+
+    cout << "This program does something magical!"<<endl;
+    cout<< "Please enter a number between 0 and 35:"<<endl;
+    cin >> num;
+    
+    if (num<=9 && num >= 0)
+    {
+        cout<<"Output: " << num <<endl;
+        cout<<"No magic huh?" <<endl;
+        cout<<"Hint: Try a number that is 10 or greater!"<<endl;
+    }
+    
+    else if (num >= 10 && num <=35)
+    {
+        cout<<"Alakazm! the " <<num << " that was entered is turning into a: " <<endl;
+        cout<<static_cast<char>(num+87)<<endl; //Why do we use 87 or 55? Well because of the ASCII values! 55 for CAP 87 for min
+    }
+    
+    else 
+    {
+        cout<<"Input is invalid!" << endl;
+        cout<<"If you want to see some magic follow the instructions!"<<endl;
+    }
+
+    cout << "Goodbye..." <<endl;
+    return 0;
+}
